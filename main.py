@@ -55,6 +55,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     :param num_classes: Number of classes to classify
     :return: The Tensor for the last layer of output
     """
+    ## 以下参考FCN论文 以及 https://github.com/jeremy-shannon/CarND-Semantic-Segmentation/blob/master/main.py
     # TODO: Implement function
     # 1x1 convolution of vgg layer 7
     layer7a_out = tf.layers.conv2d(vgg_layer7_out, num_classes, 1,
