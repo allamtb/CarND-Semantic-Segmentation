@@ -214,11 +214,8 @@ def run():
 
 
 if __name__ == '__main__':
-    data_dir = './data'
-    runs_dir = './runs'
-    # tests.test_for_kitti_dataset(data_dir)
-    output_dir = os.path.join(runs_dir, str(time.time()))
-    if os.path.exists(output_dir):
-        shutil.rmtree(output_dir)
-    os.makedirs(output_dir)
+    # data_dir = './data'
+    # runs_dir = './runs'
+    # # tests.test_for_kitti_dataset(data_dir)_dir, str(time.time()))
+    run()
 
