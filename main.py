@@ -1,5 +1,9 @@
 import os.path
+
+import shutil
 import tensorflow as tf
+import time
+
 import helper
 import warnings
 from distutils.version import LooseVersion
@@ -210,7 +214,11 @@ def run():
 
 
 if __name__ == '__main__':
-    # data_dir = './data'
-    # runs_dir = './runs'
+    data_dir = './data'
+    runs_dir = './runs'
     # tests.test_for_kitti_dataset(data_dir)
-    run()
+    output_dir = os.path.join(runs_dir, str(time.time()))
+    if os.path.exists(output_dir):
+        shutil.rmtree(output_dir)
+    os.makedirs(output_dir)
+
